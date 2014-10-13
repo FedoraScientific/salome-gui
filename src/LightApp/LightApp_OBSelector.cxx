@@ -105,7 +105,7 @@ void LightApp_OBSelector::onSelectionChanged()
   mySelectedList.clear();
   selectionChanged();
   QTime t2 = QTime::currentTime();
-  qDebug( QString( "selection time = %1 msecs" ).arg( t1.msecsTo( t2 ) ).toLatin1().constData() );
+  qDebug( "%s", QString( "selection time = %1 msecs" ).arg( t1.msecsTo( t2 ) ).toLatin1().constData() );
 }
 
 /*!

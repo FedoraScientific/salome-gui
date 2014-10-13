@@ -254,7 +254,7 @@ void showTree( SUIT_DataObject* root )
   {
     QString marg; marg.fill( ' ', 3*it.depth() );
     QString nnn = "%1 '%2'";
-    qDebug( nnn.arg( marg ).arg( it.current()->name() ).toLatin1() );
+    qDebug( "%s", nnn.arg( marg ).arg( it.current()->name() ).toLatin1().constData() );
   }
 }
 
