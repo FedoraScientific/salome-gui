@@ -100,29 +100,29 @@ namespace Plot2d
 
   void                     drawLine( QPainter*, const QPoint&, const QPoint&, 
                                      Qt::PenStyle = Qt::SolidLine, 
-                                     const QColor& = Qt::black, int = 0 );
+                                     const QColor& = QColor(Qt::black), int = 0 );
   void                     drawLine( QPainter*, const QPoint&, const QPoint&, 
                                      LineType = Solid, 
-                                     const QColor& = Qt::black, int = 0 );
+                                     const QColor& = QColor(Qt::black), int = 0 );
   void                     drawLine( QPainter*, int, int, int, int,
                                      Qt::PenStyle = Qt::SolidLine, 
-                                     const QColor& = Qt::black, int = 0 );
+                                     const QColor& = QColor(Qt::black), int = 0 );
   void                     drawLine( QPainter*, int, int, int, int,
                                      LineType = Solid, 
-                                     const QColor& = Qt::black, int = 0 );
+                                     const QColor& = QColor(Qt::black), int = 0 );
 
   void                     drawMarker( QPainter*, const QPoint&, const QRect&,
                                        QwtSymbol::Style = QwtSymbol::Ellipse,
-                                       const QColor& = Qt::black );
+                                       const QColor& = QColor(Qt::black) );
   void                     drawMarker( QPainter*, const QPoint&, const QRect&,
                                        MarkerType = Circle,
-                                       const QColor& = Qt::black );
+                                       const QColor& = QColor(Qt::black) );
   void                     drawMarker( QPainter*, int, int, int, int,
                                        QwtSymbol::Style = QwtSymbol::Ellipse,
-                                       const QColor& = Qt::black );
+                                       const QColor& = QColor(Qt::black) );
   void                     drawMarker( QPainter*, int, int, int, int,
                                        MarkerType = Circle,
-                                       const QColor& = Qt::black );
+                                       const QColor& = QColor(Qt::black) );
   
   QPixmap                  markerIcon( const QSize&, const QColor&, 
 				      Plot2d::MarkerType );
