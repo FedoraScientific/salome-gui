@@ -193,7 +193,7 @@ bool PVViewer_ViewManager::ConnectToExternalPVServer(SUIT_Desktop* aDesktop)
       std::stringstream msg2;
       msg2 << "Internal error while connecting to the pvserver.";
       msg2 << "ParaView doesn't see a connection, but PARAVIS engine tells us there is already one!" << std::endl;
-      qWarning(msg2.str().c_str());  // will go to the ParaView console (see ParavisMessageOutput below)
+      qWarning("%s", msg2.str().c_str());  // will go to the ParaView console (see ParavisMessageOutput below)
       SUIT_MessageBox::warning( aDesktop,
                                       QString("Error connecting to PVServer"), QString(msg2.str().c_str()));
       return false;
@@ -220,7 +220,7 @@ bool PVViewer_ViewManager::ConnectToExternalPVServer(SUIT_Desktop* aDesktop)
       std::stringstream msg2;
       msg2 << "Error while connecting to the requested pvserver '" << serverUrl;
       msg2 << "'. Might use default built-in connection instead!" << std::endl;
-      qWarning(msg2.str().c_str());  // will go to the ParaView console (see ParavisMessageOutput below)
+      qWarning("%s", msg2.str().c_str());  // will go to the ParaView console (see ParavisMessageOutput below)
       SUIT_MessageBox::warning( aDesktop,
                                 QString("Error connecting to PVServer"), QString(msg2.str().c_str()));
       return false;

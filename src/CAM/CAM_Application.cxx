@@ -270,7 +270,7 @@ void CAM_Application::loadModules()
       if ( desktop() && desktop()->isVisible() )
         SUIT_MessageBox::critical( desktop(), tr( "Loading modules" ), wrn );
       else
-        qWarning( qPrintable( wrn ) ); 
+        qWarning( "%s", qPrintable( wrn ) ); 
     }
   }
 }
@@ -290,19 +290,19 @@ CAM_Module* CAM_Application::loadModule( const QString& modName, const bool show
 {
   if ( myInfoList.isEmpty() )
   {
-    qWarning( qPrintable( tr( "Modules configuration is not defined." ) ) );
+    qWarning( "%s", qPrintable( tr( "Modules configuration is not defined." ) ) );
     return 0;
   }
 
   if ( !isModuleAccessible( modName ) ) {
-    qWarning( qPrintable( tr( "Module \"%1\" cannot be loaded in this application." ).arg( modName ) ) );
+    qWarning( "%s", qPrintable( tr( "Module \"%1\" cannot be loaded in this application." ).arg( modName ) ) );
     return 0;
   }
 
   QString libName = moduleLibrary( modName );
   if ( libName.isEmpty() )
   {
-    qWarning( qPrintable( tr( "Information about module \"%1\" doesn't exist." ).arg( modName ) ) );
+    qWarning( "%s", qPrintable( tr( "Information about module \"%1\" doesn't exist." ).arg( modName ) ) );
     return 0;
   }
 
@@ -359,7 +359,7 @@ CAM_Module* CAM_Application::loadModule( const QString& modName, const bool show
     if ( desktop() && desktop()->isVisible() )
       SUIT_MessageBox::warning( desktop(), tr( "Error" ), err );
     else
-      qWarning( qPrintable( err ) ); 
+      qWarning( "%s", qPrintable( err ) ); 
   }
 
   char* version = getVersion ? getVersion() : 0;
@@ -447,7 +447,7 @@ bool CAM_Application::activateModule( CAM_Module* mod )
       if ( desktop() && desktop()->isVisible() )
         SUIT_MessageBox::critical( desktop(), tr( "ERROR_TLT" ), wrn );
       else
-        qWarning( qPrintable( wrn ) ); 
+        qWarning( "%s", qPrintable( wrn ) ); 
       myModule = 0;
       return false;
     }
