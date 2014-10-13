@@ -69,11 +69,11 @@ show_version() {
     local RET=0
     local DIR=$(dirname $0)
     if [ -z "${DIR}" ] ; then DIR=. ; fi
-    if [ -f ${DIR}/VERSION ] ; then
-	cat ${DIR}/VERSION
+    if [ -f ${DIR}/VERSION.gui ] ; then
+	cat ${DIR}/VERSION.gui
     else
         echo
-	echo "Error: can't find VERSION file"  > /dev/stderr
+	echo "Error: can't find VERSION.gui file"  > /dev/stderr
         echo
 	RET=1
     fi
