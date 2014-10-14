@@ -33,6 +33,7 @@ ADD_DEFINITIONS(
 # libraries to link to
 SET(_link_LIBRARIES
   ${QT_LIBRARIES}
+  QtNetwork
   qtx
 )
 
